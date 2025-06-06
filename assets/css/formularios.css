@@ -1,0 +1,199 @@
+/* ===== ESTILOS GENERALES ===== */
+:root {
+    --color-primario: #2c3e50;
+    /* Azul oscuro corporativo */
+    --color-secundario: #e67e22;
+    /* Naranja de construcción */
+    --color-fondo: #f5f5f5;
+    /* Gris claro para fondo */
+    --color-texto: #333;
+    /* Texto principal */
+    --color-exito: #27ae60;
+    /* Verde para mensajes */
+    --color-error: #e74c3c;
+    /* Rojo para errores */
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    color: var(--color-texto);
+    line-height: 1.6;
+  }
+  
+  /* ===== CONTENEDOR PRINCIPAL ===== */
+  .container-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../assets/imagenes/backgroundcontructora1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* ===== TARJETA DE FORMULARIO ===== */
+  .auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .auth-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .auth-header h2 {
+    color: var(--color-primario);
+    margin: 10px 0 5px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .auth-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+  }
+  
+  /* ===== FORMULARIOS ===== */
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: var(--color-primario);
+    font-size: 14px;
+  }
+  
+  .form-input {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .form-input:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+  }
+  
+  /* ===== BOTÓN ===== */
+  .btn-auth {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+  }
+  
+  .btn-auth:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== FOOTER DEL FORMULARIO ===== */
+  .auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .auth-footer a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .auth-footer a:hover {
+    color: #d35400;
+    text-decoration: underline;
+  }
+  
+  /* ===== MENSAJES DE ALERTA ===== */
+  .alert {
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .alert-danger {
+    background-color: #fdecea;
+    color: var(--color-error);
+    border-left: 4px solid var(--color-error);
+  }
+  
+  .alert-success {
+    background-color: #e8f5e9;
+    color: var(--color-exito);
+    border-left: 4px solid var(--color-exito);
+  }
+  
+  /* ===== EFECTOS ADICIONALES ===== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .auth-card {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 480px) {
+    .auth-card {
+      padding: 30px 20px;
+    }
+  
+    .auth-header h2 {
+      font-size: 20px;
+    }
+  }
